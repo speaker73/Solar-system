@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    
+    <body>
+        <!-- Right below is an image of the sun -->
+        <img id="sun" src="img/sun.jpg">
+        
+        <!-- Insert the 'earth' on the next line -->
+        <div class='orbit' id='mercury-orbit'>
+            <img class='planet' id='mercury' src='img/mercury.jpg'>
+        </div>
+        <div class='orbit' id='venera-orbit'>
+            <img class='planet' id='venera' src="img/venera.jpg">
+        </div>
+        </div>
+        <div id='earth-orbit'>
+            <img id="earth" src="img/earth.jpg">
+       </div> 
+       
+       <div id='mars-orbit'>
+            <img id="mars" src="img/mars.jpg">
+       </div>
+       <!-- <div class='asteroids-orbit'>
+            <div class='asteroids'></div>
+                    </div>
+       <div class='asteroids-orbit' id='ast0'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit' id='ast1'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast3'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast4'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast5'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast6'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast7'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast8'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast9'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast10'>
+            <div class='asteroids'></div>       
+       </div>
+       
+       <div class='asteroids-orbit'id='ast11'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast12'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast13'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast14'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast15'>
+            <div class='asteroids'></div>       
+       </div>
+       <div class='asteroids-orbit'id='ast16'>
+            <div class='asteroids'></div>       
+       </div> -->
+       <script>
+          function randSpeed(min, max){
+                  return Math.random() * (max - min) + min;
+            };
+            for(i=0;i<336;i++){
+                   document.write('<div class="asteroids-orbit" style="-webkit-animation: spin-right'+ randSpeed(3, 50) +'s linear infinite;-moz-animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;-ms-animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;-o-animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;margin-top:-'+ randSpeed(400, 500) +'px;margin-left:-'+ randSpeed(400, 500) +'px;"><div class="asteroids"></div></div>');
+            }
+       </script>
+    </body>
+</html>
