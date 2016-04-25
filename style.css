@@ -6,6 +6,9 @@ html, body {
     /* The universe is black */
     background-color: black;
     /* background-image: url(img/space-bg-2.jpg); */
+    background-image: url(img/dark_space.jpg);
+    background-attachment:local;
+    overflow-x: hidden; 
 }
 @-webkit-keyframes spin-right {
   100% {
@@ -61,17 +64,17 @@ html, body {
     
     margin-left: -25px;
     margin-top: -25px;
-    border-radius: 50%;
+   /*  border-radius: 50%; */
    /* border-color:  blue;
     border-width:2px;
     border-style: solid;
     border-radius: 50px;
     box-shadow: 0 0 37px blue;*/
-     -webkit-animation: spin-right 18s linear infinite;
-     -moz-animation: spin-right 18s linear infinite;
-      -ms-animation: spin-right 18s linear infinite;
-       -o-animation: spin-right 18s linear infinite;
-          animation: spin-right 18s linear infinite;
+     -webkit-animation: spin-right 0.06575s linear infinite;
+     -moz-animation: spin-right 0.06575s linear infinite;
+      -ms-animation: spin-right 0.06575s linear infinite;
+       -o-animation: spin-right 0.06575s linear infinite;
+          animation: spin-right 0.06575s linear infinite;
     
 }
 
@@ -86,10 +89,10 @@ html, body {
     margin-top: -300px;
     margin-left: -300px;
 
-    border-width: 2px;
-    border-style: dotted;
-    border-color: white;
-    border-radius: 50%;
+   /*  border-width: 2px;
+   border-style: dotted;
+   border-color: white;
+   border-radius: 50%; */
     
      -webkit-animation: spin-right 24s linear infinite;
      -moz-animation: spin-right 24s linear infinite;
@@ -107,17 +110,17 @@ html, body {
     
     margin-left: -15px;
     margin-top: -15px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
    /* border-color:  blue;
     border-width:2px;
     border-style: solid;
     
     box-shadow: 0 0 37px blue;*/
-     -webkit-animation: spin-right 10s linear infinite;
-     -moz-animation: spin-right 10s linear infinite;
-      -ms-animation: spin-right 10s linear infinite;
-       -o-animation: spin-right 10s linear infinite;
-          animation: spin-right 10s linear infinite;
+     -webkit-animation: spin-right 0.07s linear infinite;
+     -moz-animation: spin-right 0.07s linear infinite;
+      -ms-animation: spin-right 0.07s linear infinite;
+       -o-animation: spin-right 0.07s linear infinite;
+          animation: spin-right 0.07s linear infinite;
     
 }
 #mars-orbit {
@@ -131,10 +134,10 @@ html, body {
     margin-top: -400px;
     margin-left: -400px;
 
-    border-width: 2px;
-    border-style: dotted;
-    border-color: white;
-    border-radius: 50%;
+   /*  border-width: 2px;
+   border-style: dotted;
+   border-color: white;
+   border-radius: 50%; */
     
      -webkit-animation: spin-right 45.12s linear infinite;
      -moz-animation: spin-right 45.12s linear infinite;
@@ -167,11 +170,19 @@ html, body {
        -o-animation: spin-right 10s linear infinite;
           animation: spin-right 10s linear infinite;
 }
+.orbit_not_dot {
+    border-style:none;
+}
 #venera {
     width:50px;
     height:50px;
     margin-left: -25px;
     margin-top: -25px;
+    -webkit-animation: spin-right 15.84s linear infinite;
+     -moz-animation: spin-right 15.84s linear infinite;
+      -ms-animation: spin-right 15.84s linear infinite;
+       -o-animation: spin-right 15.84s linear infinite;
+          animation: spin-right 15.84s linear infinite;
 }
 #venera-orbit {
     width: 400px;
@@ -189,11 +200,11 @@ html, body {
     height:20px;
     margin-left: -10px;
     margin-top: -10px;
-    -webkit-animation: spin-right 90s linear infinite;
-     -moz-animation: spin-right 90s linear infinite;
-      -ms-animation: spin-right 90s linear infinite;
-       -o-animation: spin-right 90s linear infinite;
-          animation: spin-right 90s linear infinite;
+    -webkit-animation: spin-right 3.81s linear infinite;
+     -moz-animation: spin-right 3.81s linear infinite;
+      -ms-animation: spin-right 3.81s linear infinite;
+       -o-animation: spin-right 3.81s linear infinite;
+          animation: spin-right 3.81s linear infinite;
 }
 #mercury-orbit {
     width: 300px;
@@ -239,128 +250,55 @@ html, body {
        -o-animation: spin-right 10s linear infinite;
           animation: spin-right 10s linear infinite;
 }
-#ast0 {
-    -webkit-animation: spin-right 2s linear infinite;
-     -moz-animation: spin-right  2s linear infinite;
-      -ms-animation: spin-right  2s linear infinite;
-       -o-animation: spin-right  2s linear infinite;
-          animation: spin-right  2s linear infinite;
-         
+span {
+  color:white;
+ width:160px;
+ margin-left:-20px;
+
 }
-#ast1 {
-    -webkit-animation: spin-right 20s linear infinite;
-     -moz-animation: spin-right  20s linear infinite;
-      -ms-animation: spin-right  20s linear infinite;
-       -o-animation: spin-right  20s linear infinite;
-          animation: spin-right  20s linear infinite;
-         
+.buttons {
+  float:left;
+  line-height: 2.5;
+   width:100px;
+   
+   margin-left: 20px;
+   margin-top: 4px;
+  
+ 
 }
-#ast2 {
-    -webkit-animation: spin-right 12s linear infinite;
-     -moz-animation: spin-right  12s linear infinite;
-      -ms-animation: spin-right  12s linear infinite;
-       -o-animation: spin-right  12s linear infinite;
-          animation: spin-right  12s linear infinite;
-          
+.cheks{
+  width:60px;
+ 
 }
-#ast3 {
-    -webkit-animation: spin-right 22s linear infinite;
-     -moz-animation: spin-right  22s linear infinite;
-      -ms-animation: spin-right  22s linear infinite;
-       -o-animation: spin-right  22s linear infinite;
-          animation: spin-right  22s linear infinite;
-         
+form {
+  position:fixed;
+  z-index:10000;
+  width:160px;
+  display: block;
+  line-height: 2.5;
 }
-#ast4 {
-    -webkit-animation: spin-right 5s linear infinite;
-     -moz-animation: spin-right  5s linear infinite;
-      -ms-animation: spin-right  5s linear infinite;
-       -o-animation: spin-right  5s linear infinite;
-          animation: spin-right  5s linear infinite;
-          margin-top: -420px;
-    margin-left: -470px;
+
+#jupiters-orbit {
+  
+   width: 2000px;
+    height: 2000px;
+    margin-top: -1000px;
+    margin-left: -1000px;
+     -webkit-animation: spin-right 284s linear infinite;
+     -moz-animation: spin-right 284s linear infinite;
+      -ms-animation: spin-right 284s linear infinite;
+       -o-animation: spin-right 284s linear infinite;
+          animation: spin-right 284s linear infinite;
 }
-#ast5 {
-    -webkit-animation: spin-right 7.3s linear infinite;
-     -moz-animation: spin-right  7.3s linear infinite;
-      -ms-animation: spin-right  7.3s linear infinite;
-       -o-animation: spin-right  7.3s linear infinite;
-          animation: spin-right  7.3s linear infinite;
-}
-#ast6 {
-    -webkit-animation: spin-right 5s linear infinite;
-     -moz-animation: spin-right  5s linear infinite;
-      -ms-animation: spin-right  5s linear infinite;
-       -o-animation: spin-right  5s linear infinite;
-          animation: spin-right  5s linear infinite;
-}
-#ast7 {
-    -webkit-animation: spin-right 5.3s linear infinite;
-     -moz-animation: spin-right  5.3s linear infinite;
-      -ms-animation: spin-right  5.3s linear infinite;
-       -o-animation: spin-right  5.3s linear infinite;
-          animation: spin-right  5.3s linear infinite;
-}
-#ast8 {
-    -webkit-animation: spin-right 4.7s linear infinite;
-     -moz-animation: spin-right  4.7s linear infinite;
-      -ms-animation: spin-right  4.7s linear infinite;
-       -o-animation: spin-right  4.7s linear infinite;
-          animation: spin-right  4.7s linear infinite;
-}
-#ast9 {
-    -webkit-animation: spin-right 3.9s linear infinite;
-     -moz-animation: spin-right  3.9s linear infinite;
-      -ms-animation: spin-right  3.9s linear infinite;
-       -o-animation: spin-right  3.9s linear infinite;
-          animation: spin-right  3.9s linear infinite;
-}
-#ast10 {
-    -webkit-animation: spin-right 8.34s linear infinite;
-     -moz-animation: spin-right  8.34s linear infinite;
-      -ms-animation: spin-right  8.34s linear infinite;
-       -o-animation: spin-right  8.34s linear infinite;
-          animation: spin-right  8.34s linear infinite;
-}
-#ast11 {
-    -webkit-animation: spin-right 15.5s linear infinite;
-     -moz-animation: spin-right  15.5s linear infinite;
-      -ms-animation: spin-right  15.5s linear infinite;
-       -o-animation: spin-right  15.5s linear infinite;
-          animation: spin-right  15.5s linear infinite;
-}
-#ast12 {
-    -webkit-animation: spin-right 11.5s linear infinite;
-     -moz-animation: spin-right  11.5s linear infinite;
-      -ms-animation: spin-right  11.5s linear infinite;
-       -o-animation: spin-right  11.5s linear infinite;
-          animation: spin-right  11.5s linear infinite;
-}
-#ast13 {
-    -webkit-animation: spin-right 7.05s linear infinite;
-     -moz-animation: spin-right  7.05s linear infinite;
-      -ms-animation: spin-right  7.05s linear infinite;
-       -o-animation: spin-right  7.05s linear infinite;
-          animation: spin-right  7.05s linear infinite;
-}
-#ast14 {
-    -webkit-animation: spin-right 34.5s linear infinite;
-     -moz-animation: spin-right  34.5s linear infinite;
-      -ms-animation: spin-right  34.5s linear infinite;
-       -o-animation: spin-right  34.5s linear infinite;
-          animation: spin-right  34.5s linear infinite;
-}
-#ast15 {
-    -webkit-animation: spin-right 16.5s linear infinite;
-     -moz-animation: spin-right  16.5s linear infinite;
-      -ms-animation: spin-right  16.5s linear infinite;
-       -o-animation: spin-right  16.5s linear infinite;
-          animation: spin-right  16.5s linear infinite;
-}
-#ast16 {
-    -webkit-animation: spin-right 12.75s linear infinite;
-     -moz-animation: spin-right  12.75s linear infinite;
-      -ms-animation: spin-right  12.75s linear infinite;
-       -o-animation: spin-right  12.75s linear infinite;
-          animation: spin-right  12.75s linear infinite;
+#jupiter{
+  
+   width:100px;
+    height:100px;
+    margin-left: -50px;
+    margin-top: -50px;
+    -webkit-animation: spin-right 0.0271s linear infinite;
+     -moz-animation: spin-right 0.0271s linear infinite;
+      -ms-animation: spin-right 0.0271s linear infinite;
+       -o-animation: spin-right 0.0271s linear infinite;
+          animation: spin-right 0.0271s linear infinite;
 }

@@ -1,12 +1,12 @@
-<html>
+﻿<html id="html">
     <head>
         <link rel="stylesheet" href="style.css" />
     </head>
     
-    <body>
+    <body id="body">
         <!-- Right below is an image of the sun -->
-        <img id="sun" src="img/sun.jpg">
-        
+       <!--  <img id="sun" src="img/sun.jpg"> -->
+        <img id="sun" src="img/sol_animated.gif">
         <!-- Insert the 'earth' on the next line -->
         <div class='orbit' id='mercury-orbit'>
             <img class='planet' id='mercury' src='img/mercury.jpg'>
@@ -15,13 +15,18 @@
             <img class='planet' id='venera' src="img/venera.jpg">
         </div>
         </div>
-        <div id='earth-orbit'>
-            <img id="earth" src="img/earth.jpg">
+        <div id='earth-orbit' class="orbit">
+            <img id="earth" class="planet" src="img/earth.jpg">
        </div> 
        
-       <div id='mars-orbit'>
-            <img id="mars" src="img/mars.jpg">
+       <div id='mars-orbit' class="orbit">
+            <img id="mars" src="img/mars.jpg" class="planet">
        </div>
+        
+        <div id="jupiters-orbit" class='orbit'>
+            <img id='jupiter' src='img/jupiter.jpg' class='planet'>
+        </div>
+
        <!-- <div class='asteroids-orbit'>
             <div class='asteroids'></div>
                     </div>
@@ -74,13 +79,103 @@
        <div class='asteroids-orbit'id='ast16'>
             <div class='asteroids'></div>       
        </div> -->
+         <!--  <video controls>
+           <source src="audio/theme_12.mp3" type="audio/mpeg">
+           <source src="audio/human_theme.mp3" type="audio/mpeg" id="human_theme"> 
+           <source src="audio/slide silent planet.mp3" type="audio/mpeg">
+           
+         </video> -->
+          <div id="form_div">
+          <form>
+            <input class="cheks" checked="checked" id="orbits34" type="checkbox" name="orbits_c"  value="a1" onclick="orbitSwitch()"> <span>Орбиты</span> 
+            <input class="cheks" checked="checked" id="stars34" type="checkbox" name="stars_c"  value="a2" onclick="starsSwitch()"> <span>Звезды</span> 
+            <input  class="buttons" type="button" name="p5"  value="fly theme" onclick="createAudio('audio/theme_12.mp3')"> 
+            <input  class="buttons" type="button" name="p4"  value="human_theme" onclick="createAudio('audio/human_theme.mp3')"> 
+            <input  class="buttons" type="button" name="p3"  value="silent planet" onclick="createAudio('audio/slide_silent_planet.mp3')"> 
+          </form>
+          </div>
        <script>
+          orbits = true;
+          stars = true;
+          cliker = 0;
+          function createAudio(theme){
+              
+              var audioX = document.createElement("audio");
+              audioX.pause(); 
+              audioX.setAttribute("src", theme);
+              audioX.setAttribute("loop", "loop");
+              audioX.setAttribute("autoplay", "autoplay");
+              audioX.setAttribute("controls", "controls");
+              audioX.setAttribute("id", "autoplayed");
+              
+          }
+         function starsSwitch(){
+              while(true){
+                  if(stars == true){
+                    document.getElementById('body').style.backgroundImage = 'none';
+                    document.getElementById('html').style.backgroundImage = 'none';  
+                    stars = !stars;
+                    break;
+                    }   else {
+                    document.getElementById('body').style.backgroundImage  = 'url(img/dark_space.jpg)';
+                    document.getElementById('html').style.backgroundImage  = 'url(img/dark_space.jpg)';  
+                    stars = !stars;
+                    break;
+                    }
+                }
+              };
+          
+          function playAny() {
+    document.getElementById("human_theme").click(); // Click on the checkbox
+}
+
+         function check(){
+            
+            var status = true;
+
+            return function(){
+
+
+             if(status) {
+              document.getElementById("mars-orbit").style.borderStyle = "none";
+                     document.getElementById("venera-orbit").style.borderStyle = "none";
+                     document.getElementById("mercury-orbit").style.borderStyle = "none";
+                     document.getElementById("earth-orbit").style.borderStyle = "none";
+             } else {
+
+              document.getElementById("mars-orbit").style.borderStyle = "dotted";
+                     document.getElementById("venera-orbit").style.borderStyle = "dotted";
+                     document.getElementById("mercury-orbit").style.borderStyle = "dotted";
+                     document.getElementById("earth-orbit").style.borderStyle = "dotted"; 
+
+             }
+
+             status = !status;
+     
+     // return status;                
+            };  
+          };
+
+        var orbitSwitch = check();
           function randSpeed(min, max){
                   return Math.random() * (max - min) + min;
             };
-            for(i=0;i<336;i++){
-                   document.write('<div class="asteroids-orbit" style="-webkit-animation: spin-right'+ randSpeed(3, 50) +'s linear infinite;-moz-animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;-ms-animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;-o-animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;margin-top:-'+ randSpeed(400, 500) +'px;margin-left:-'+ randSpeed(400, 500) +'px;"><div class="asteroids"></div></div>');
+            for(i=0;i<500;i++){
+                   document.write('<div class="asteroids-orbit" style="-webkit-animation: spin-right'+ randSpeed(3, 50) +'s linear infinite;-moz-animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;-ms-animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;-o-animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;animation: spin-right '+ randSpeed(3, 50) +'s linear infinite;margin-top:-'+ randSpeed(400, 500) +'px;margin-left:-'+ randSpeed(400, 500) +'px;"><div class="asteroids" style="width:'+ randSpeed(2, 20) +'px;height:'+ randSpeed(2, 15) +'px;margin-top: -15px;margin-left: -15px;"></div></div>');
             }
+        // начать повторы с интервалом 24 сек
+        ir = 1;
+var timerId = setInterval(function() {
+  console.log( "С новым Годом! " + ir);
+  ir =  ir + 1;
+}, 24000);
+
+// через 5 сек остановить повторы
+setTimeout(function() {
+  clearInterval(timerId);
+  alert( 'стоп' );
+}, 500000000);
+
        </script>
     </body>
 </html>
