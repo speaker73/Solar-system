@@ -70,7 +70,7 @@ html, body {
     border-style: solid;
     border-radius: 50px;
     box-shadow: 0 0 37px blue;*/
-     -webkit-animation: spin-right 0.06575s linear infinite;
+     -webkit-animation: spin-0.0287s linear infinite;
      -moz-animation: spin-right 0.06575s linear infinite;
       -ms-animation: spin-right 0.06575s linear infinite;
        -o-animation: spin-right 0.06575s linear infinite;
@@ -150,11 +150,6 @@ html, body {
     top:0%;
     left:50%;
     border-radius: 50%;
-     -webkit-animation: spin-right 10s linear infinite;
-     -moz-animation: spin-right 10s linear infinite;
-      -ms-animation: spin-right 10s linear infinite;
-       -o-animation: spin-right 10s linear infinite;
-          animation: spin-right 10s linear infinite;
 }
 .orbit {
      position: absolute;
@@ -301,4 +296,27 @@ form {
       -ms-animation: spin-right 0.0271s linear infinite;
        -o-animation: spin-right 0.0271s linear infinite;
           animation: spin-right 0.0271s linear infinite;
+}
+#saturn-orbit{
+   width: 2400px;
+    height: 2400px;
+    margin-top: -1200px;
+    margin-left: -1200px;
+     -webkit-animation: spin-right 707s linear infinite;
+     -moz-animation: spin-right 707s linear infinite;
+      -ms-animation: spin-right 707s linear infinite;
+       -o-animation: spin-right 707s linear infinite;
+          animation: spin-right 707s linear infinite;
+}
+#saturn {
+  width:80px;
+    height:80px;
+    margin-left: -40px;
+    margin-top: -40px;
+     border-radius: none;
+   /*  -webkit-animation: spin-right 0.0287s linear infinite;
+    -moz-animation: spin-right 0.0287s linear infinite;
+     -ms-animation: spin-right 0.0287s linear infinite;
+      -o-animation: spin-right 0.0287s linear infinite;
+         animation: spin-right 0.0287s linear infinite; */
 }
